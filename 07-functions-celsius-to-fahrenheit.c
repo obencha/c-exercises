@@ -15,7 +15,7 @@
 // place using %.1f if you like.
 double celsius_to_fahrenheit(double celsius) {
     // TODO: return the converted temperature instead of 0.0
-    return 0.0;
+    return celsius * 1.8 + 32;
 }
 
 int main(void) {
@@ -25,6 +25,8 @@ int main(void) {
     scanf("%lf", &celsius);
 
     // TODO: call celsius_to_fahrenheit and print the converted value.
+
+    printf("%.1fC = %.1fF\n", celsius, celsius_to_fahrenheit(celsius));
 
     return 0;
 }
