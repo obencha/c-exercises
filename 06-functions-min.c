@@ -21,7 +21,6 @@ int min_of_two(int a, int b) {
     else{
         return b;
     }
-    return 0;
 }
 
 int main(void) {
