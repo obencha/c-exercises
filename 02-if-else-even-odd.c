@@ -13,6 +13,16 @@
 // - Input: 7  -> "7 is odd."
 // - Input: 42 -> "42 is even."
 // Hint: use the remainder operator % to test divisibility by 2.
+
+int iseven(int num){
+    if (num % 2 == 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
 int main(void) {
     int number = 0;
 
@@ -21,5 +31,14 @@ int main(void) {
 
     // Add your if/else statements here to print the correct message.
 
+    if (number == 0){
+        printf("Zero is even...\n");
+    }
+    else if(iseven(number)){
+        printf("%d is even\n", number);
+    }
+    else{
+        printf("%d is odd\n", number);
+    }
     return 0;
 }
