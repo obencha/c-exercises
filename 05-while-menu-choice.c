@@ -16,11 +16,17 @@ int main(void) {
     int choice = 0;
 
     // TODO: print the menu here.
-
-    printf("Choose an option (1-3): ");
-    scanf("%d", &choice);
+    printf("=========================\n");
+    printf("1) Play \n2) Settings \n3) Quit\n");
+    printf("=========================\n");
 
     // TODO: add your while loop to repeat the prompt when choice is not 1-3.
 
+    while (choice < 1 || choice > 3){
+        printf("Choose an option (1-3): ");
+        scanf("%d", &choice);
+    }
+
+    printf("You selected option %d.\n", choice);
     return 0;
 }
