@@ -19,6 +19,21 @@ int main(void) {
     scanf("%d", &score);
 
     // Insert your if/else-if/else chain here.
+    if(score >= 90 && score <= 100){
+        printf("Score %d: A - Awsome!\n", score);
+    }
+    else if(score >= 80 && score <= 89){
+        printf("Score %d: B - Better, keep up the great work!\n", score);
+    }
+    else if(score >= 70 && score <=79){
+        printf("Score %d: C - Cound do better.\n", score);
+    }
+    else if(score >= 60 && score <= 69){
+        printf("Score %d: D - Did not do well, need to study more.\n", score);
+    }
+    else{
+        printf("Score %d: F - Failed.\n", score);
+    }
 
     return 0;
 }
