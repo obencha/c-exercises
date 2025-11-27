@@ -24,12 +24,31 @@
 int main(void) {
     int numbers[MAX_NUMBERS];
     int count = 0;
+    int i; //Used only as a value for the for loop
+    int sum;
+    double average = 0;
 
     // TODO: ask for count and validate it is between 1 and MAX_NUMBERS.
+    while (count < 1 || count > MAX_NUMBERS){
+        printf("How meny would you like to enter? (Must be between 1 and %d): ", MAX_NUMBERS);
+        scanf("%d", &count);
+    }
 
     // TODO: read values into the array using a loop.
 
+    for(i = 0; i < count; i++){
+        printf("Enter value %d: ", i + 1); //Added one here so we dont confuse users by starting with 0
+        scanf("%d", &numbers[i]);
+
+        sum += numbers[i]; //Calculate the sum now so we only need one loop
+    }
+
     // TODO: compute sum and average, then print them.
+
+    average = sum / (double)count;
+
+    printf("Sum: %d\n", sum);
+    printf("Average: %.1f\n", average);
 
     return 0;
 }
