@@ -20,19 +20,18 @@
 
 int main(void) {
     int values[SIZE];
-    int i;
     int max_value;
     int max_value_index;
 
     // TODO: fill the array with user input using a for loop.
-    for (i = 0; i < SIZE; i++){
+    for (int i = 0; i < SIZE; i++){
         printf("%d/%d Enter a whole number: ", i+1, SIZE);
         scanf("%d", &values[i]);
     }
 
     // TODO: find the largest number and its index using another loop.
     max_value = values[0];
-    for (i = 0; i < SIZE; i++){
+    for (int i = 0; i < SIZE; i++){
         if(values[i] > max_value){
             max_value = values[i];
             max_value_index = i;
