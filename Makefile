@@ -31,8 +31,9 @@
 11: 11-arrays-reverse-print.c
 	gcc 11-arrays-reverse-print.c -o 11
 
-clear:
+clean:
 	rm ./01
+	rm ./02
 	rm ./03
 	rm ./04
 	rm ./05
