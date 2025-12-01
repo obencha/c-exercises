@@ -43,8 +43,8 @@ int main(void) {
     }
 
     printf("\nReversed: ");
-    for (int i = length; i > 0; i--){
-        printf("%d ", data[i-1]); //subtract 1 so that we are in the actual index range
+    for (int i = length-1; i >= 0; i--){ //subtract 1 from length so that we are in the actual index range
+        printf("%d ", data[i]); 
     }
     printf("\n");
 
