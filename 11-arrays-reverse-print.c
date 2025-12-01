@@ -25,10 +25,28 @@ int main(void) {
     int length = 0;
 
     // TODO: ask for length and ensure it is between 1 and MAX_LENGTH.
+    while (length < 1 || length > MAX_LENGTH){
+        printf("How meny numbers (1-8)? ");
+        scanf("%d", &length);
+    }
 
     // TODO: read values into the array using a loop.
+    for (int i = 0; i < length; i++){
+        printf("Value %d: ", i+1);
+        scanf("%d", &data[i]);
+    }
 
     // TODO: print values in original order, then print them in reverse order.
+    printf("You entered: ");
+    for (int i = 0; i < length; i++){
+        printf("%d ", data[i]);
+    }
+
+    printf("\nReversed: ");
+    for (int i = length; i > 0; i--){
+        printf("%d ", data[i-1]); //subtract 1 so that we are in the actual index range
+    }
+    printf("\n");
 
     return 0;
 }
